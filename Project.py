@@ -114,7 +114,7 @@ def song(genre):
     Country = []
     Hip-Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
     Rock = []
-    Pop = []
+    Pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM", ]
     
     if genre == 1:
         url = random.choice(Country)
