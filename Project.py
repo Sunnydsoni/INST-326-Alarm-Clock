@@ -45,7 +45,7 @@ def timeEntry():
 
         print("Date is not in correct format.")
 
-        inTime = input("Enter the desired time for alarm (hh:mm:ss): ").split(":")
+        inTime = input("Enter the desired time for alarm (hh:mm): ").split(":")
 
         try:
             inTime = [int(x) for x in inTime]
