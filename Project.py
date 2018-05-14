@@ -87,7 +87,7 @@ while inDate < datetime.datetime.now():
 nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
 
-url = input("Enter a url to open at alarm, or random for a random video: ")
+url = input("Enter a url to open at alarm, or random for a random song from a genre of your choosing: ")
 
 while nowDate != inDate:
 
@@ -104,5 +104,7 @@ print("-----------------------")
 
 if url.lower() == "random":
     #get desired genre and find video
+    genre = input("Which genre would you like?")
+    
 else:
     webbrowser.open(url, new=0, autoraise=True)
