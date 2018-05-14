@@ -56,8 +56,9 @@ def timeEntry():
 
     return inTime
 
-#Class sets conditions for clearing the terminal across Windows operating system w/ (cls)
+#sets conditions for clearing the terminal across Windows operating system w/ (cls)
 def cls():
+    """allow terminal to be cleared based on the os"""
     if os.name == 'nt':
         os.system('cls')
     else:
@@ -65,6 +66,7 @@ def cls():
 
 # Function that takes in the users genre input, then selects a random YouTube video from the specified list. Code by Baldwin          
 def song(genre):
+    """Categorize urls into lists based on musical genres."""
     country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA",
                "https://www.youtube.com/watch?v=dRX0wDNK6S4", "https://www.youtube.com/watch?v=nADTbWQof7Y"]
     rap = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0",
