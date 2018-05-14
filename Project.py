@@ -61,24 +61,24 @@ def cls():
         os.system('clear')
 
 def song(genre):
-    Country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA",
+    country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA",
                "https://www.youtube.com/watch?v=dRX0wDNK6S4", "https://www.youtube.com/watch?v=nADTbWQof7Y"]
-    Hip_Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0",
+    rap = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0",
                "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
-    Rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg", "https://www.youtube.com/watch?v=8SbUC-UaAxE",
+    rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg", "https://www.youtube.com/watch?v=8SbUC-UaAxE",
             "https://www.youtube.com/watch?v=u9Dg-g7t2l4"]
-    Pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM",
+    pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM",
            "https://www.youtube.com/watch?v=ffxKSjUwKdU&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl",
            "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
 
     if genre == 1:
-        return random.choice(Country)
+        return random.choice(country)
     elif genre == 2:
-        return random.choice(Hip_Hop)
+        return random.choice(rap)
     elif genre == 3:
-        return random.choice(Rock)
+        return random.choice(rock)
     elif genre == 4:
-        return random.choice(Pop)
+        return random.choice(pop)
 
 
 
@@ -130,7 +130,7 @@ print("-----------------------")
 
 if url.lower() == "random":
     # get desired genre and find video
-    genre = input("Which genre would you like? Enter a number. 1) Country 2) Hip-Hop 3) Rock 4) Pop: ")
+    genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
     url == song(genre)
     webbrowser.open(url, new=0, autoraise=True)
 else:
