@@ -1,2 +1,2 @@
 # INST-326-Alarm-Clock
-Final Project
+To view our program, visit our github page and open "Project.py."
