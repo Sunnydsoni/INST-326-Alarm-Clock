@@ -110,6 +110,6 @@ else:
     webbrowser.open(url, new=0, autoraise=True)
 
 Country = []
-Hip-Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0","https://www.youtube.com/watch?v=oCveByMXd_0, https://www.youtube.com/watch?v=8fbyfDbi-MI"]
+Hip-Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
 Rock = []
 Pop = []
