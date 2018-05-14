@@ -5,6 +5,7 @@ import datetime
 import time
 import webbrowser
 import os
+import random
 
 
 def dateEntry():
@@ -109,8 +110,19 @@ if url.lower() == "random":
 else:
     webbrowser.open(url, new=0, autoraise=True)
 
-def song(genre): 
+def song(genre):
     Country = []
     Hip-Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
     Rock = []
     Pop = []
+    
+    if genre == 1:
+        url = random.choice(Country)
+    elif genre == 2:
+        url = random.choice(Hip-Hop)
+    elif genre == 3:
+        url = random.choice(Rock)
+    elif genre == 4:
+        url = random.choice(Pop)
+    
+    return url   
