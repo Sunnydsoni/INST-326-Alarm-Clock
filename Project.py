@@ -113,7 +113,7 @@ else:
 def song(genre):
     Country = []
     Hip-Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
-    Rock = []
+    Rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg", ]
     Pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM", ]
     
     if genre == 1:
