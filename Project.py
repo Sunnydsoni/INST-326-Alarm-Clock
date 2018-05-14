@@ -68,7 +68,8 @@ def song(genre):
     rap = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0",
                "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
     rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg", "https://www.youtube.com/watch?v=8SbUC-UaAxE",
-            "https://www.youtube.com/watch?v=u9Dg-g7t2l4"]
+            "https://www.youtube.com/watch?v=u9Dg-g7t2l4", "https://www.youtube.com/watch?v=2ZBtPf7FOoM", 
+            "https://www.youtube.com/watch?v=81RqEnvczV8", "https://www.youtube.com/watch?v=iIpfWORQWhU"]
     pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM",
            "https://www.youtube.com/watch?v=ffxKSjUwKdU&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl",
            "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
