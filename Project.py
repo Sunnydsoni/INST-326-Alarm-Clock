@@ -55,7 +55,10 @@ def timeEntry():
     return inTime
 
 def cls():
-    os.system('cls')
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 inDate = datetime.datetime(1900, 1, 1, 0, 0, 0, 0)
 
