@@ -41,7 +41,7 @@ def timeEntry():
     except ValueError:
         valid = False
 
-    while not valid or len(inTime) != 3:
+    while not valid or len(inTime) != 2:
 
         print("Date is not in correct format.")
 
@@ -104,7 +104,6 @@ inDate = inDate.replace(month=finalDay[0])
 inDate = inDate.replace(day=finalDay[1])
 inDate = inDate.replace(hour=finalTime[0])
 inDate = inDate.replace(minute=finalTime[1])
-inDate = inDate.replace(second=finalTime[2])
 
 while inDate < datetime.datetime.now():
     print("This time is before now, enter another time.")
