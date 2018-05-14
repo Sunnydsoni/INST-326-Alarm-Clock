@@ -104,7 +104,7 @@ print("-----------------------")
 
 if url.lower() == "random":
     #get desired genre and find video
-    genre = input("Which genre would you like?")
+    genre = input("Which genre would you like? Enter a number. 1) Country 2) Hip-Hop 3) Rock 4) Pop: ")
     
 else:
     webbrowser.open(url, new=0, autoraise=True)
