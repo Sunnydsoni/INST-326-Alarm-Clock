@@ -7,7 +7,7 @@ import webbrowser
 import os
 import random
 
-#Prompts user for the desired date they want for their specified alarm. Coded by Hayden
+
 def dateEntry():
     inDay = input("Enter the desired date for alarm (mm/dd/yyyy): ").split("/")
 
@@ -17,7 +17,7 @@ def dateEntry():
     except ValueError:
         valid = False
 
-    while not valid or len(inDay) != 3: #Handles incorrect user input
+    while not valid or len(inDay) != 3:
 
         print("Date is not in correct format.")
 
@@ -31,7 +31,7 @@ def dateEntry():
 
     return inDay
 
-#Prompts user for what time they want the alarm to go off. Exception handling included for an entry in an incorrect format. Coded by Hayden and Sunny
+#Prompts user for what time they want the alarm to go off. Exception handling included for an entry in an incorrect format
 def timeEntry():
     inTime = input("Enter the desired time for alarm (hh:mm): ").split(":")
 
@@ -54,7 +54,6 @@ def timeEntry():
             valid = False
 
     return inTime
-
 
 def cls():
     if os.name == 'nt':
@@ -95,6 +94,28 @@ url = input("Enter a url to open at alarm, or random for a random song from a ge
 if url.lower() == "random":
     # get desired genre and find video
     genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
+    
+    try:
+        while int(genre) < 1 or int(genre) > 4:
+            genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
+        valid = True
+    except ValueError:
+        valid = False
+    
+    while not valid:
+
+        print("Invalid Entry.")
+
+        genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
+
+        try:
+            while int(genre) < 1 or int(genre) > 4:
+                genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
+            valid = True
+        except ValueError:
+            valid = False
+        
+    
     url = song(int(genre))
 
 finalDay = dateEntry()
@@ -117,7 +138,6 @@ while inDate < datetime.datetime.now():
     inDate = inDate.replace(day=finalDay[1])
     inDate = inDate.replace(hour=finalTime[0])
     inDate = inDate.replace(minute=finalTime[1])
-    inDate = inDate.replace(second=finalTime[2])
 
 nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
