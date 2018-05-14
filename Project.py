@@ -7,7 +7,7 @@ import webbrowser
 import os
 import random
 
-
+#Prompts user for the desired date they want for their specified alarm. Coded by Hayden
 def dateEntry():
     inDay = input("Enter the desired date for alarm (mm/dd/yyyy): ").split("/")
 
@@ -17,7 +17,7 @@ def dateEntry():
     except ValueError:
         valid = False
 
-    while not valid or len(inDay) != 3:
+    while not valid or len(inDay) != 3: #Handles incorrect user input
 
         print("Date is not in correct format.")
 
@@ -31,7 +31,7 @@ def dateEntry():
 
     return inDay
 
-#Prompts user for what time they want the alarm to go off. Exception handling included for an entry in an incorrect format
+#Prompts user for what time they want the alarm to go off. Exception handling included for an entry in an incorrect format. Coded by Hayden and Sunny
 def timeEntry():
     inTime = input("Enter the desired time for alarm (hh:mm): ").split(":")
 
@@ -54,6 +54,7 @@ def timeEntry():
             valid = False
 
     return inTime
+
 
 def cls():
     if os.name == 'nt':
