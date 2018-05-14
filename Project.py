@@ -91,6 +91,10 @@ nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
 
 url = input("Enter a url to open at alarm, or random for a random song from a genre of your choosing: ")
+if url.lower() == "random":
+    # get desired genre and find video
+    genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
+    url = song(int(genre))
 
 finalDay = dateEntry()
 finalTime = timeEntry()
@@ -130,11 +134,5 @@ print("-----------------------")
 print("Alarm Reached")
 print("-----------------------")
 
-if url.lower() == "random":
-    # get desired genre and find video
-    genre = input("Which genre would you like? Enter a number. 1) Country 2) Rap 3) Rock 4) Pop: ")
-    url = song(int(genre))
-    webbrowser.open(url, new=0, autoraise=True)
-else:
-    webbrowser.open(url, new=0, autoraise=True)
+webbrowser.open(url, new=0, autoraise=True)
    
