@@ -60,6 +60,7 @@ def cls():
     else:
         os.system('clear')
 
+# Function that takes in the users genre input, then selects a random YouTube video from the specified list. Code by Baldwin          
 def song(genre):
     country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA",
                "https://www.youtube.com/watch?v=dRX0wDNK6S4", "https://www.youtube.com/watch?v=nADTbWQof7Y"]
