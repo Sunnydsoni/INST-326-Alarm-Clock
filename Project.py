@@ -72,15 +72,15 @@ def song(genre):
            "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
 
     if genre == 1:
-        random_url = random.choice(Country)
+        return random.choice(Country)
     elif genre == 2:
-        random_url = random.choice(Hip_Hop)
+        return random.choice(Hip_Hop)
     elif genre == 3:
-        random_url = random.choice(Rock)
+        return random.choice(Rock)
     elif genre == 4:
-        random_url = random.choice(Pop)
+        return random.choice(Pop)
 
-    return random_url
+
 
 
 inDate = datetime.datetime(1900, 1, 1, 0, 0, 0, 0)
