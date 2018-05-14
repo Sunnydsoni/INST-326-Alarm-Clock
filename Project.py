@@ -60,10 +60,29 @@ def cls():
     else:
         os.system('clear')
 
+def song(genre):
+    Country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA", "https://www.youtube.com/watch?v=dRX0wDNK6S4", "https://www.youtube.com/watch?v=nADTbWQof7Y"]
+    Hip_Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
+    Rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg","https://www.youtube.com/watch?v=8SbUC-UaAxE", "https://www.youtube.com/watch?v=u9Dg-g7t2l4"]
+    Pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM","https://www.youtube.com/watch?v=ffxKSjUwKdU&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl", "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
+    
+    if genre == 1:
+        url = random.choice(Country)
+    elif genre == 2:
+        url = random.choice(Hip_Hop)
+    elif genre == 3:
+        url = random.choice(Rock)
+    elif genre == 4:
+        url = random.choice(Pop)
+    
+    return url
+
 inDate = datetime.datetime(1900, 1, 1, 0, 0, 0, 0)
 
 nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
+
+url = input("Enter a url to open at alarm, or random for a random song from a genre of your choosing: ")
 
 finalDay = dateEntry()
 finalTime = timeEntry()
@@ -91,8 +110,6 @@ while inDate < datetime.datetime.now():
 nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
 
-url = input("Enter a url to open at alarm, or random for a random song from a genre of your choosing: ")
-
 while nowDate != inDate:
 
     nowDate = datetime.datetime.now()
@@ -113,19 +130,4 @@ if url.lower() == "random":
 else:
     webbrowser.open(url, new=0, autoraise=True)
 
-def song(genre):
-    Country = ["https://www.youtube.com/watch?v=Ct9BFr9XBaI", "https://www.youtube.com/watch?v=p_IwENcMPOA", "https://www.youtube.com/watch?v=dRX0wDNK6S4", "https://www.youtube.com/watch?v=nADTbWQof7Y"]
-    Hip_Hop = ["https://www.youtube.com/watch?v=VSXJkvQOLP0", "https://www.youtube.com/watch?v=oCveByMXd_0", "https://www.youtube.com/watch?v=8fbyfDbi-MI"]
-    Rock = ["https://www.youtube.com/watch?v=ROatPGGMvXg","https://www.youtube.com/watch?v=8SbUC-UaAxE", "https://www.youtube.com/watch?v=u9Dg-g7t2l4"]
-    Pop = ["https://www.youtube.com/watch?v=nfWlot6h_JM","https://www.youtube.com/watch?v=ffxKSjUwKdU&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl", "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
-    
-    if genre == 1:
-        url = random.choice(Country)
-    elif genre == 2:
-        url = random.choice(Hip_Hop)
-    elif genre == 3:
-        url = random.choice(Rock)
-    elif genre == 4:
-        url = random.choice(Pop)
-    
-    return url   
+   
