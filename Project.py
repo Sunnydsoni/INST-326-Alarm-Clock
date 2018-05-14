@@ -33,7 +33,7 @@ def dateEntry():
 
 #Prompts user for what time they want the alarm to go off. Exception handling included for an entry in an incorrect format
 def timeEntry():
-    inTime = input("Enter the desired time for alarm (hh:mm:ss): ").split(":")
+    inTime = input("Enter the desired time for alarm (hh:mm): ").split(":")
 
     try:
         inTime = [int(x) for x in inTime]
