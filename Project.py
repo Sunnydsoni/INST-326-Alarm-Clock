@@ -7,7 +7,8 @@ import webbrowser
 import os
 import random
 
-
+#Prompts user for what date they want the alarm to go off. Exception handling included for an entry in an incorrect format.
+#Code by Hayden and Darius
 def dateEntry():
     inDay = input("Enter the desired date for alarm (mm/dd/yyyy): ").split("/")
 
@@ -55,11 +56,12 @@ def timeEntry():
 
     return inTime
 
+#Class sets conditions for clearing the terminal across Windows operating system w/ (cls)
 def cls():
     if os.name == 'nt':
         os.system('cls')
     else:
-        os.system('clear')
+        os.system('clear') #for all other operating systems you can clear terminal w/ (clear) Code by Hayden and Darius
 
 # Function that takes in the users genre input, then selects a random YouTube video from the specified list. Code by Baldwin          
 def song(genre):
@@ -74,6 +76,7 @@ def song(genre):
            "https://www.youtube.com/watch?v=ffxKSjUwKdU&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl",
            "https://www.youtube.com/watch?v=lp-EO5I60KA&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl&index=1"]
 
+# splits genres into separate categories for user selection by assigning each a number
     if genre == 1:
         return random.choice(country)
     elif genre == 2:
