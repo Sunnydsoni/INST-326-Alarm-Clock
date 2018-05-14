@@ -3,6 +3,9 @@ Final Project
 
 import datetime
 import time
+import webbrowser
+import os
+
 
 def dateEntry():
     inDay = input("Enter the desired date for alarm (mm/dd/yyyy): ").split("/")
@@ -50,6 +53,9 @@ def timeEntry():
 
     return inTime
 
+def cls():
+    os.system('cls')
+
 inDate = datetime.datetime(1900, 1, 1, 0, 0, 0, 0)
 
 nowDate = datetime.datetime.now()
@@ -81,10 +87,13 @@ while inDate < datetime.datetime.now():
 nowDate = datetime.datetime.now()
 nowDate = nowDate.replace(microsecond=0)
 
+url = input("Enter a url to open at alarm, or random for a random video: ")
+
 while nowDate != inDate:
 
     nowDate = datetime.datetime.now()
     nowDate = nowDate.replace(microsecond=0)
+    cls()
     print("Time: " + str(nowDate))
     print("Alarm: " + str(inDate))
     time.sleep(1)
@@ -92,3 +101,8 @@ while nowDate != inDate:
 print("-----------------------")
 print("Alarm Reached")
 print("-----------------------")
+
+if url.lower() == "random":
+    #get desired genre and find video
+else:
+    webbrowser.open(url, new=0, autoraise=True)
